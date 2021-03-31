@@ -20,7 +20,8 @@ class Controller
   end
 
   def destroy
-    index = @view.ask_index
-    @cookbook.delete(index)
+    list
+    index = @view.ask_index('cookbook you want to delete')
+    @cookbook.remove(index - 1)
   end
 end
