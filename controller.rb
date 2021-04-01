@@ -31,5 +31,8 @@ class Controller
     parsing = Parsing.new(ingredient)
     result = parsing.call
     @view.display(result)
+    index = @view.ask_index('index of the recipe do you want to add')
+    recipe = result[index-1]
+    @cookbook.add(recipe)
   end
 end
