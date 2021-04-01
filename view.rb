@@ -11,7 +11,7 @@ class View
 
   def display(cookbook)
     cookbook.each_with_index  do |recipe, index|
-      puts "#{index + 1}. #{recipe.name} \n ## #{recipe.description}"
+      puts "#{index + 1}. #{recipe.name} ( #{recipe.rating} / 5 ) \n ## #{recipe.description}"
     end
   end
 end
